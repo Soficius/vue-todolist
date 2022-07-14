@@ -29,10 +29,7 @@
                 </li>
             </ul>
             <div class="input-group mt-4">
-                <input v-model.trim ="newTask"
-                type="text" 
-                class="form-control"
-                 placeholder="Nuova attività">
+                <input v-model.trim ="newTask"type="text" class="form-control"placeholder="Nuova attività" @keyup.enter='addTask' @keyup.esc="newTask =''"/>
                 <button class="btn btn-outline-secondary text-bg-success" type="button" id="button-addon2" @click="addTask">Aggiungi</button>
               </div>
         </main>
